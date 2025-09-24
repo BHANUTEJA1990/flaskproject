@@ -4,7 +4,7 @@ import smtplib
 from email.message import EmailMessage
 
 app = Flask(__name__)
-
+app.run(host="0.0.0.0", port=10000, debug=True)
 # --- CONFIGURE THESE ---
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
@@ -70,4 +70,5 @@ def submit():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
